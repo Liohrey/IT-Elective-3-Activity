@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <header>
+        <h1>About Me</h1>
+        <nav aria-label="Main navigation">
+            <a href="{% url 'portfolio:index' %}">Home</a>
+            <a href="{% url 'portfolio:about' %}">About</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section aria-labelledby="about-heading">
+            <h2 id="about-heading">My Story</h2>
+            <img src="{% static 'images/about.jpg' %}" alt="Me working on a laptop" class="about-image">
+            <p>Hi, I'm Leohyray Belleza, a passionate BSIT Student with 2+ years of experience...</p>
+        </section>
+
+        <section aria-labelledby="skills-heading">
+            <h2 id="skills-heading">Skills & Expertise</h2>
+            <ul>
+                <li>Web Development (HTML, CSS, JavaScript)</li>
+                <li>Backend Development (Node.js)</li>
+                <li>Database Management</li>
+            </ul>
+        </section>
+
+        <section aria-labelledby="contact-heading">
+            <h2 id="contact-heading">Get in Touch</h2>
+            <p>Email: <a href="mailto:john.doe@example.com">202210462@gordoncollege.edu.ph</a></p>
+            <p>Phone: <a href="tel:+1234567890">+63 927 332 9849</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 John Doe. All rights reserved.</p>
+    </footer>
+</body>
+</html> 

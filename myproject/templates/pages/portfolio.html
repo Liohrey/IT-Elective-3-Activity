@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Leohyray N. Belleza</h1>
+        <p>BSIT 3C</p>
+    </header>
+
+    <nav aria-label="Main navigation">
+        <a href="{% url 'portfolio:index' %}">Home</a>
+        <a href="{% url 'portfolio:about' %}">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="container">
+        <section id="about" class="about-section">
+            <h2>About Me</h2>
+            <img src="{% static 'images/profile.jpeg' %}" alt="Profile Picture" style="width:300px; height:270px; border-radius:50%;">
+            <p>I'm an Information Technology student with 2+ years of experience...</p>
+        </section>
+
+        <section id="projects" class="projects-section">
+            <h2>Featured Projects</h2>
+            <div class="project-card">
+                <h3>Project One</h3>
+                <p>Cute Anime Character</p>
+            </div>
+            <div class="project-card">
+                <h3>Project Two</h3>
+                <p>Also a Cute Anime Character</p>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <h2>Contact Me</h2>
+            <p>Email: 202210462@gordoncollege.edu.ph</p>
+            <p>Phone: +63 927 332 9849</p>
+        </section>
+    </div>
+
+    <footer>
+        &copy; 2025 Leohyray Cute. All rights reserved.
+    </footer>
+</body>
+</html>
