@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load custom_filters %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+<div class="dashboard">
+    {% for item in data %}
+    <div class="card">
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.count|currency }}</p>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
